@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>細胞小學堂</title>
+<link rel= " shortcut icon " href= "image/favicon.ico" >
+<link href="css/style.css" rel="stylesheet" type="text/css"/> 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script>
+	var pstring="水#無機鹽#蛋白質#脂類#醣類#核酸";
+	var word=pstring.split("#");
+	var reply, reply2;
+	function mouseOut(){
+	 if(reply==0)
+	 document.getElementById('box1').innerHTML=word[reply];
+	 if(reply==1)
+	 document.getElementById('box2').innerHTML=word[reply];
+	 if(reply==2)
+	 document.getElementById('box3').innerHTML=word[reply];
+	 if(reply==3)
+	 document.getElementById('box4').innerHTML=word[reply];
+	 if(reply==4)
+	 document.getElementById('box5').innerHTML=word[reply];
+	 if(reply==5)
+	 document.getElementById('box6').innerHTML=word[reply];
+	}
+	function mouseOver(){
+	 if(reply2==0)
+	 document.getElementById('box1').innerHTML="水佔上了細胞成分的 80%左右。由於水是許多物質的溶劑，所以亦只有在水的環境當中，某些物質才能進行擴散、合成和分解。因此，水是細胞進行生命活動的重要成分，在含量上無論是過多或過少，都可以導致細胞的異常或死亡。";
+	 if(reply2==1)
+	 document.getElementById('box2').innerHTML="在細胞內，無機鹽大都溶於水中，並呈帶正電荷的陽離子或帶負電荷的負離子狀態，對於神經衝動的傳導、肌肉的收縮、維持體內的酸鹼平衡等，都起著重大的作用。";
+	 if(reply2==2)
+	 document.getElementById('box3').innerHTML="蛋白質由氨基酸所構成，在結構上來說，蛋白質是細胞的主要成分。因為激發或抑壓體內功能活動的酵素也是蛋白質，而細胞的一切功能活動，都要在酵素的參與下進行，所以蛋白質是生命活動不可缺少的物質。";
+	 if(reply2==3)
+	 document.getElementById('box4').innerHTML="脂類也是細胞的重要成分之一，除了可以作為儲存熱能的形式外，與神經活動亦有密切的關係。";
+	 if(reply2==4)
+	 document.getElementById('box5').innerHTML="醣類又稱碳水化合物，是由碳、氫、氧所組成，在人體內主要以肝醣及肌醣的形式儲存在肝細胞及肌細胞內，當被分解的時候，就能釋放能量供細胞活動之用。";
+	 if(reply2==5)
+	 document.getElementById('box6').innerHTML="核酸的構造極為複雜，是細胞的重要成分，核酸可分為核糖核酸，簡稱 RNA；及去氧核糖核酸，簡稱 DNA。前者主要分佈在細胞質內，而後者主要存在於細胞核內，但兩者在遺存信息的傳遞及蛋白質的合成過程中，都起著同樣重要的作用。";
+	}
+	
+	$(document).ready(function(){
+	$('.product a').css('cursor' , 'pointer').click(function(){
+	$('.modal').fadeOut();
+	var modal = $(this).attr('data-modal');
+	if($(modal).is(':visible') == true) {
+	$(modal).fadeOut();
+	}
+	else {
+	$(modal).fadeIn();
+	}
+	});
+	});
+
+</script>
+</head>
+<body>
+	<div id="wrapper">
+	<header>
+		<div id="logo">
+		<img src="image/c.jpg" width="100%" >
+		</div>
+		<div id="head">
+		<nav>
+  		<ul>
+		<li><a href="index.html"> 細胞學說 </a></li>
+		<li><a href="細胞構造.html"> 細胞構造 </a></li>
+		<li><a href="細胞生理.html"> 細胞生理 </a></li>
+		<li><a href="探索活動.html"> 探索活動 </a></li>
+		<li><a href="課後測驗.html"> 課後測驗 </a></li>
+		</ul>
+		</nav>
+		</div>
+	</header>
+	<div id="content">
+		<div id="content_in">
+			<br><br><h1> 細胞構造 </h1><br>
+			<p style="text-align:center;">來看看動物細胞與植物細胞的構造與不同吧!</p>
+			<div class="product">
+			<a href="#" class="hotspot spot_1" data-modal=".modal_1">+</a>
+			<a href="#" class="hotspot spot_2" data-modal=".modal_2">+</a>
+			<a href="#" class="hotspot spot_3" data-modal=".modal_3">+</a>
+			<a href="#" class="hotspot spot_4" data-modal=".modal_4">+</a>
+			<a href="#" class="hotspot spot_5" data-modal=".modal_5">+</a>
+			<a href="#" class="hotspot spot_6" data-modal=".modal_6">+</a>
+			<img src="image/a.jpg" alt="cell" style="display:block; margin:auto;">
+			<div class="modal modal_1">
+				<div class="modal_info">
+				<h3>細胞膜</h3>
+				<p>細胞膜位於細胞的表面，是細胞與胞外環境間的分界構造，可選擇性的控制物質進出，以形成穩定的細胞內在環境。細胞膜主要由磷脂分子形成的脂雙層構成，蛋白質鑲嵌於其中，且有醣類附著於外側，與細胞辨識有關。</p>
+				<a href="#">X</a>
+				</div>
+			</div>
+			<!-- end modal_1 -->
+			<div class="modal modal_2">
+				<div class="modal_info">
+				<h3>細胞核</h3>
+				<p>細胞核以雙層核膜與細胞質分隔，核膜上有許多核孔，可讓物質進出。核內有核質、染色質與核仁。核質是膠狀溶液，染色質主要由DNA與蛋白質組成，攜帶遺傳訊息，當細胞開始分裂時，染色質會緊密纏繞形成染色體。核仁主要由RNA及蛋白質主成，與核醣體的形成有關。</p>
+				<a href="#">X</a>
+				</div>
+			</div>
+			<!-- end modal_2 -->
+			<div class="modal modal_3">
+				<div class="modal_info">
+				<h3>細胞質</h3>
+				<p>真核細胞中，位於細胞核與細胞膜之間的內含物稱為細胞質，包含細胞質液、多種胞器與其他具有特定功能的構造。細胞質液為膠狀溶液，油水、無機鹽與有機物組成，是細胞進行化學反應的主要部位。胞器具有膜，不同的胞器含有不同的酵素，可進行特定的化學反應。</p>
+				<a href="#">X</a>
+				</div>
+				<!-- end modal info -->
+			</div>
+			<!-- end modal_3 -->
+			<div class="modal modal_4">
+				<div class="modal_info">
+				<h3>液泡</h3>
+				<p>單層膜的胞器，在不同細胞中有不同功能，有的負責排出滲入細胞的水分，有的儲存水分，與細胞形狀的維持有關。</p>
+				<a href="#">X</a>
+				</div>
+			</div>
+			<!-- end modal_4 -->
+			<div class="modal modal_5">
+				<div class="modal_info">
+				<h3>粒線體</h3>
+				<p>由雙層膜構成的胞器，內膜向內凹陷形成許多皺褶。粒線體是細胞進行呼吸作用釋出能量的場所，因此有細胞的能量工廠之稱。</p>
+				<a href="#">X</a>
+				</div>
+			</div>
+			<!-- end modal_5 -->
+			</div>
+			<div class="modal modal_6">
+				<div class="modal_info">
+				<h3>葉綠體與細胞壁</h3>
+				<p>葉綠體是綠色植物細胞與藻類細胞特有的胞器，具有雙層膜，內部含有類囊體與基質，主要功能是行光合作用。</p>
+				<p>細胞壁是細胞的外層，在細胞膜的外面，細胞壁之厚薄常因組織、功能不同而異。它可以是堅韌的，有彈性，和有時堅硬的。它提供細胞既有結構支承和保護，同時也作為一種過濾機制。植物、真菌（菌物）、藻類和原核生物都具有細胞壁，而支原體屬細胞不具有細胞壁。</p>
+				<a href="#">X</a>
+				</div>
+			</div>
+			<!-- end modal_6 -->
+			
+			<br><br><br><br><p style="text-align:center;">組成細胞的分子，一共分為六種主要元素，讓我們一起來認識吧!</p>
+			<div id="box1" onmouseover="reply2=0;mouseOver();" onmouseout="reply=0;mouseOut();" >水</div> 
+			<div id="box2" onmouseover="reply2=1;mouseOver();" onmouseout="reply=1;mouseOut();" >無機鹽</div>
+			<div id="box3" onmouseover="reply2=2;mouseOver();" onmouseout="reply=2;mouseOut();" >蛋白質</div> 
+			<div id="box4" onmouseover="reply2=3;mouseOver();" onmouseout="reply=3;mouseOut();" >脂類</div>
+			<div id="box5" onmouseover="reply2=4;mouseOver();" onmouseout="reply=4;mouseOut();" >醣類</div> 
+			<div id="box6" onmouseover="reply2=5;mouseOver();" onmouseout="reply=5;mouseOut();" >核酸</div>
+			
+		</div>
+			
+		
+		<br><br><iframe width="800" height="480" src="https://www.youtube.com/embed/6X4VVpeakKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br><br><br><input type="button" value="資料來源1" target="_blank" onclick="location.href=' http://d19930320.weebly.com/1-3-3204832990303402708336896.html'">
+		<span>&ensp;&ensp;&ensp;</span>
+		<input type="button" value="資料來源2" target="_blank" onclick="location.href='http://www.hkpe.net/hkdsepe/human_body/cell.htm'">
+	</div>
+	<footer>
+	<p>Cell Biology</p>
+	</footer>
+	</div>
+</body>
+</html>
